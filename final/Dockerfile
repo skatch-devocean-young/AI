@@ -4,14 +4,15 @@ FROM python:3.10-slim
 # Set working directory
 WORKDIR /app
 
-# Copy requirements and application files
+# Copy application files
 COPY app.py /app/app.py
 COPY generator4.pth /app/generator4.pth
 
-# Install system dependencies and Python packages
+# Install system dependencies for image processing
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
     build-essential \
+    libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Python dependencies

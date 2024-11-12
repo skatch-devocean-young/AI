@@ -5,9 +5,11 @@ import torch
 import torch.nn as nn
 import numpy as np
 from sklearn.cluster import KMeans
+from flask_cors import CORS  # CORS import 추가
 import io
 
 app = Flask(__name__)
+CORS(app)  # CORS 허용
 
 # =======================
 # 1. 배경 제거 API 설정
