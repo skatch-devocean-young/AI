@@ -1,6 +1,4 @@
 flask
-flask-cors
 pillow
-torch
-scikit-learn
 rembg
+scikit-learn
